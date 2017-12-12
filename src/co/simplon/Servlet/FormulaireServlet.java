@@ -33,10 +33,8 @@ public class FormulaireServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
-		
-		
-		this.getServletContext().getRequestDispatcher("/maisonHoteFormulaire.jsp").forward(request, response);
+		request.setAttribute("listeReservation", CandidaturesManager.getInstance().getCandidatures());
+		this.getServletContext().getRequestDispatcher("/ListeCandidatures.jsp").forward(request, response);
 	}
 
 	/**
