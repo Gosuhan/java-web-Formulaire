@@ -1,0 +1,114 @@
+.backgroundbeige
+{
+    /*background-image: url("../images/maison.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;*/
+    background-color: #ffd180;
+}
+
+.gras
+{
+    Font-Weight: Bold;
+}
+
+.backgroundwhite
+{
+    background-color: snow;
+}
+
+.backgroundgreen
+{
+    background-color: #81c784;
+}
+
+.imagenantes
+{
+    background-image: url("../images/nantes2.jpg");
+    background-repeat: no-repeat;
+}
+
+.imagenature
+{
+    background-image: url("../images/promenadenature1.jpg");
+    /*background-repeat: no-repeat;
+    background-size: 100%;*/
+}
+
+.effetmetal
+{
+    background-image: url("../images/effetmetal.jpg");
+    /*background-repeat: no-repeat;
+    background-size: 100%;*/
+}
+
+.effetmetal2
+{
+    background-image: url("../images/effetmetal2.jpg");
+    /*background-repeat: no-repeat;
+    background-size: 100%;*/
+}
+
+.effetmetal3
+{
+    background-image: url("../images/effetmetal3.jpg");
+    /*background-repeat: no-repeat;
+    background-size: 100%;*/
+}
+
+.centervertical
+{
+    position: relative;
+    top: 10rem;
+}
+
+.taillevideo1
+{
+width: 50%;
+height: 50%;
+}
+
+.overflow
+{
+    /*flex: flex;
+    padding: 12px;*/
+    overflow: auto;
+}
+
+.carousel .carousel-item {
+    display: none;
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .title
+  {
+      /*color: snow;
+      display: inline-block;
+      font-size: 2.1rem;
+      padding: 0;*/
+      /*color: #fff;
+      font-size: 2.1rem;
+      position: absolute;
+      display: inline-block;
+      padding: 0;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;*/
+      position: absolute;
+      color: #fff;
+      display: inline-block;
+      font-size: 2.1rem;
+      padding: 0;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+  }
+
+  .titleResponsive
+  {
+    min-height: 56px;
+    height: 110px;
+  }
