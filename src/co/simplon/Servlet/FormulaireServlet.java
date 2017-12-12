@@ -53,7 +53,7 @@ public class FormulaireServlet extends HttpServlet {
 				System.out.println("Prénom : " + request.getParameter("prenom"));
 				System.out.println("Téléphone : " + request.getParameter("telephone"));
 				System.out.println("E-mail : " + request.getParameter("email"));
-				System.out.println("Adresse : " + request.getParameter("adresse"));
+				System.out.println("Adresse : " + request.getParameter("adresse") + "\n");
 				
 				getServletContext().getRequestDispatcher("/validationFormulaire.jsp").forward(request, response);
 			
