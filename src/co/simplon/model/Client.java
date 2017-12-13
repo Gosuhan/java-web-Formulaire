@@ -7,7 +7,10 @@ public class Client {
 	private String telephone;
 	private String email;
 	private String adresse;
-	private String parking;
+	private Boolean parking;
+	private String animal;
+	private String fumeur;
+	private String sejour;
 	
 	public String getNom() {
 		return nom;
@@ -39,12 +42,32 @@ public class Client {
 	public void setAdresse(String adresse) {
 		this.adresse = adresse;
 	}
-	public String getParking() {
+	public Boolean getParking() {
 		return parking;
 	}
-	public void setParking(String parking) {
+	public void setParking(Boolean parking) {
 		this.parking = parking;
 	}
+	public String getAnimal() {
+		return animal;
+	}
+	public void setAnimal(String animal) {
+		this.animal = animal;
+	}
+	public String getFumeur() {
+		return fumeur;
+	}
+	public void setFumeur(String fumeur) {
+		this.fumeur = fumeur;
+	}
+	public String getSejour() {
+		return sejour;
+	}
+	public void setSejour(String sejour) {
+		this.sejour = sejour;
+	}
+
+
 	
 	
 

@@ -1,6 +1,7 @@
 package co.simplon.Servlet;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.simplon.model.CandidaturesManager;
 import co.simplon.model.Client;
+import co.simplon.model.DataBase;
 
 /**
  * Servlet implementation class BasicServlet
@@ -19,12 +21,17 @@ import co.simplon.model.Client;
 @WebServlet("/FormulaireServlet")
 public class FormulaireServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private DataBase database = new DataBase();
        
     /**
+     * @throws SQLException 
+     * @throws ClassNotFoundException 
      * @see HttpServlet#HttpServlet()
      */
-    public FormulaireServlet() {
+    public FormulaireServlet() throws ClassNotFoundException, SQLException {
         super();
+        
+        database.initConnection();
         // TODO Auto-generated constructor stub
     }
 
@@ -33,7 +40,11 @@ public class FormulaireServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.setAttribute("listeReservation", CandidaturesManager.getInstance().getCandidatures());
+		// Récupérer les infos de la base de donnée
+		//showData
+		
+		
+		request.setAttribute("listeReservation", /*CandidaturesManager.getInstance().getCandidatures()*/);
 		this.getServletContext().getRequestDispatcher("/ListeCandidatures.jsp").forward(request, response);
 	}
 
@@ -48,6 +59,9 @@ public class FormulaireServlet extends HttpServlet {
 				String email = request.getParameter("email");
 				String adresse = request.getParameter("adresse");
 				String parking = request.getParameter("parking");
+				String animal = request.getParameter("animal");
+				String fumeur = request.getParameter("fumeur");
+				String sejour = request.getParameter("gender");
 				//List<Client> candidatures = new ArrayList<Client>();
 				
 //				System.out.println("Nom : " + request.getParameter("nom"));
@@ -56,6 +70,8 @@ public class FormulaireServlet extends HttpServlet {
 //				System.out.println("E-mail : " + request.getParameter("email"));
 //				System.out.println("Adresse : " + request.getParameter("adresse") + "\n");
 				
+				
+				// InsertData
 			
 				Client newClient = new Client();
 				newClient.setNom(nom);
@@ -65,13 +81,24 @@ public class FormulaireServlet extends HttpServlet {
 				newClient.setAdresse(adresse);
 				//newClient.setParking(parking);
 				if (parking!= null){
-					newClient.setParking("Oui");
+					newClient.setParking(true);
 	            }else{
-	            	newClient.setParking("Non");
+	            	newClient.setParking(false);
+	            }
+				if (animal!= null){
+					newClient.setAnimal("Oui");
+	            }else{
+	            	newClient.setAnimal("Non");
+	            }
+				if (fumeur!= null){
+					newClient.setFumeur("Oui");
+	            }else{
+	            	newClient.setFumeur("Non");
 	            }
 				
+				newClient.setSejour(sejour);
 				
-				CandidaturesManager.getInstance().addClient(newClient);
+				//CandidaturesManager.getInstance().addClient(newClient);
 				
 				request.setAttribute("newClientAttribute", newClient);
 				getServletContext().getRequestDispatcher("/validationFormulaire.jsp").forward(request, response);

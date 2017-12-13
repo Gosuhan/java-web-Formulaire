@@ -10,6 +10,13 @@
 <body>
 	<% 
 	Client clt = (Client)request.getAttribute("newClientAttribute");
+	String parking;
+	if (clt.getParking() == true) {
+			parking="Oui";
+		}
+		else {
+			parking="Non";
+		}
 	%>
 	<div>
 		<h1>Voici les informations que vous avez communiqué :</h1>
@@ -22,13 +29,22 @@
 		<p>Votre numéro de téléphone : <%=clt.getTelephone()%></p>
 	</div>
 	<div>
-		<p>Votre e-mail : <%=clt.getTelephone()%></p>
+		<p>Votre e-mail : <%=clt.getEmail()%></p>
 	</div>
 	<div>
 		<p>Votre adresse : <%=clt.getAdresse()%></p>
 	</div>
 	<div>
-		<p>Parking : <%=clt.getParking()%></p>
+		<p>Parking : <%=parking%></p>
+	</div>
+	<div>
+		<p>Animal : <%=clt.getAnimal()%></p>
+	</div>
+	<div>
+		<p>Fumeur : <%=clt.getFumeur()%></p>
+	</div>
+	<div>
+		<p>Sejour : <%=clt.getSejour()%></p>
 	</div>
 </body>
 </html>

@@ -29,6 +29,9 @@
               <th>E-mail</th>
               <th>Adresse</th>
               <th>Parking</th>
+              <th>Animal</th>
+              <th>Fumeur</th>
+              <th>Séjour</th>
           </tr>
         </thead>
 <%
@@ -44,6 +47,9 @@ for(int i=0; i<listeClient.size(); i++){
             <td><%=clt.getEmail()%></td>
             <td><%=clt.getAdresse()%></td>
             <td><%=clt.getParking()%></td>
+            <td><%=clt.getAnimal()%></td>
+            <td><%=clt.getFumeur()%></td>
+            <td><%=clt.getSejour()%></td>
           </tr>
     <%
     } 
