@@ -47,15 +47,15 @@ public class FormulaireServlet extends HttpServlet {
 				String telephone = request.getParameter("telephone");
 				String email = request.getParameter("email");
 				String adresse = request.getParameter("adresse");
+				String parking = request.getParameter("parking");
 				//List<Client> candidatures = new ArrayList<Client>();
 				
-				System.out.println("Nom : " + request.getParameter("nom"));
-				System.out.println("Prénom : " + request.getParameter("prenom"));
-				System.out.println("Téléphone : " + request.getParameter("telephone"));
-				System.out.println("E-mail : " + request.getParameter("email"));
-				System.out.println("Adresse : " + request.getParameter("adresse") + "\n");
+//				System.out.println("Nom : " + request.getParameter("nom"));
+//				System.out.println("Prénom : " + request.getParameter("prenom"));
+//				System.out.println("Téléphone : " + request.getParameter("telephone"));
+//				System.out.println("E-mail : " + request.getParameter("email"));
+//				System.out.println("Adresse : " + request.getParameter("adresse") + "\n");
 				
-				getServletContext().getRequestDispatcher("/validationFormulaire.jsp").forward(request, response);
 			
 				Client newClient = new Client();
 				newClient.setNom(nom);
@@ -63,9 +63,19 @@ public class FormulaireServlet extends HttpServlet {
 				newClient.setTelephone(telephone);
 				newClient.setEmail(email);
 				newClient.setAdresse(adresse);
+				//newClient.setParking(parking);
+				if (parking!= null){
+					newClient.setParking("Oui");
+	            }else{
+	            	newClient.setParking("Non");
+	            }
 				
 				
 				CandidaturesManager.getInstance().addClient(newClient);
+				
+				request.setAttribute("newClientAttribute", newClient);
+				getServletContext().getRequestDispatcher("/validationFormulaire.jsp").forward(request, response);
+
 				//candidatures.add(newClient);
 			}
 		}

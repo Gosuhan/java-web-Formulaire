@@ -28,6 +28,7 @@
               <th>Numéro de téléphone</th>
               <th>E-mail</th>
               <th>Adresse</th>
+              <th>Parking</th>
           </tr>
         </thead>
 <%
@@ -42,11 +43,12 @@ for(int i=0; i<listeClient.size(); i++){
             <td><%=clt.getTelephone()%></td>
             <td><%=clt.getEmail()%></td>
             <td><%=clt.getAdresse()%></td>
+            <td><%=clt.getParking()%></td>
           </tr>
     <%
     } 
     %>
-        </tbody>
+      </tbody>
       </table>
 </body>
 </html>

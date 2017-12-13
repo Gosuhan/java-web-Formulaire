@@ -7,6 +7,7 @@ public class Client {
 	private String telephone;
 	private String email;
 	private String adresse;
+	private String parking;
 	
 	public String getNom() {
 		return nom;
@@ -37,6 +38,12 @@ public class Client {
 	}
 	public void setAdresse(String adresse) {
 		this.adresse = adresse;
+	}
+	public String getParking() {
+		return parking;
+	}
+	public void setParking(String parking) {
+		this.parking = parking;
 	}
 	
 	
