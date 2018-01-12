@@ -12,6 +12,7 @@ public class Client {
 	private String fumeur;
 	private String sejour;
 	
+	
 	public String getNom() {
 		return nom;
 	}

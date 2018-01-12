@@ -1,6 +1,10 @@
+<!DOCTYPE HTML SYSTEM>
 <html>
+  <!-- W3C - Les dernières erreurs ne sont pas "corrigeables" (soit parcequ'elles viennent du fichier "materialize.css",
+  soit parceque leurs corrections entraînent une modification de la page, soit parcequ'elles ne sont pas cohérentes avec HTML5) -->
 
 <head>
+  <meta charset="UTF-8">
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
@@ -8,18 +12,12 @@
   <!--Import mycss.css-->
   <link type="text/css" rel="stylesheet" href="css/mycss.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Maison d'hôte / Région</title>
 </head>
 
 <body>
-  <!--Import jQuery before materialize.js-->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="js/materialize.min.js"></script>
-  <script type="text/javascript" src="js/myjs.js"></script>
-
   <header id="monancre">
     <nav role="navigation">
       <div class="titleresponsive green">
@@ -44,62 +42,62 @@
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
       </div>
     </nav>
-    </br>
-    </br>
+    <br>
+    <br>
   </header>
 
-  <div class="carousel effetmetal">
+  <section class="carousel effetmetal">
     <a class="carousel-item" href="#one!">
-      <img src="images/nantes.png">
+      <img src="images/nantes.png" alt="image globale de Nantes">
     </a>
     <a class="carousel-item" href="#two!">
-      <img src="images/nantes_chateau1.jpg">
+      <img src="images/nantes_chateau1.jpg" alt="image du Chateau de la Duchesse Anne">
     </a>
     <a class="carousel-item" href="#three!">
-      <img src="images/nantes_chateau2.jpg">
+      <img src="images/nantes_chateau2.jpg" alt="autre image du Chateau de la Duchesse Anne">
     </a>
     <a class="carousel-item" href="#four!">
-      <img src="images/erdre.jpg">
+      <img src="images/erdre.jpg" alt="image de l'Erdre">
     </a>
     <a class="carousel-item" href="#five!">
-      <img src="images/nantes_hangar.jpg">
+      <img src="images/nantes_hangar.jpg" alt="image du Hangar à bananes">
     </a>
     <a class="carousel-item" href="#five!">
-      <img src="images/nantes_elephant1.jpg">
+      <img src="images/nantes_elephant1.jpg" alt="image de l'Elephant des machines de l'isle">
     </a>
     <a class="carousel-item" href="#five!">
-      <img src="images/nantes_dragon1.jpg">
+      <img src="images/nantes_dragon1.jpg" alt="image du Dragon des machines de l'isle">
     </a>
     <a class="carousel-item" href="#five!">
-      <img src="images/nantes_place_royal.jpg">
+      <img src="images/nantes_place_royal.jpg" alt="image de la place Royale">
     </a>
     <a class="carousel-item" href="#five!">
-      <img src="images/nantes_tramway.jpg">
+      <img src="images/nantes_tramway.jpg" alt="image du tramway nantais">
     </a>
-  </div>
-  <div class="row z-depth-4 center backgroundgreen">
-    <div class="col s12 m6">
-      </br>
-      <video src="../videos/nantes1.mp4" autoplay loop muted controls width="50%" height="50%" alt="Vidéo de présentation de Nantes comme jamais vu"></video>
-      </br>
-      </br>
-    </div>
-    <div class="col s12 m6">
-      </br>
-      <video src="../videos/ma_ville_nantes.mp4" autoplay loop muted controls width="50%" height="50%" alt="Vidéo de présentation de la ville de Nantes"></video>
-      </br>
-      </br>
-    </div>
-  </div>
+  </section>
+  <section class="row z-depth-4 center backgroundgreen">
+    <article class="col s12 m6">
+      <br>
+      <video class="taillevideo1" src="../videos/nantes1.mp4" autoplay loop muted controls></video>
+      <br>
+      <br>
+    </article>
+    <article class="col s12 m6">
+      <br>
+      <video class="taillevideo1" src="../videos/ma_ville_nantes.mp4" autoplay loop muted controls></video>
+      <br>
+      <br>
+    </article>
+  </section>
   <footer class="page-footer green">
-    <div class="container">
-      <div class="row">
+    <section class="container">
+      <section class="row">
         <div class="col l6 s12">
           <h5 class="white-text">Partenaires</h5>
           <p class="grey-text text-lighten-4">D.M Corporation</p>
           <p class="grey-text text-lighten-4">Davy Morgane Immobiliers</p>
         </div>
-        <div class="col l4 offset-l2 s12">
+        <aside class="col l4 offset-l2 s12">
           <h5 class="white-text">Suivez-nous</h5>
           <ul>
             <li>
@@ -119,17 +117,20 @@
               <a class="grey-text text-lighten-3" href="#!"> Youtube</a>
             </li>
           </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
+        </aside>
+      </section>
+    </section>
+    <section class="footer-copyright">
       <div class="container">
         © 2017 Copyright
         <a class="grey-text text-lighten-4 right" href="#monancre">Retour en haut de la page</a>
       </div>
-    </div>
+    </section>
   </footer>
-
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/myjs.js"></script>
 </body>
 
 </html>
